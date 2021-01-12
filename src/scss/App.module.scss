@@ -1,0 +1,141 @@
+
+@import "~@fontsource/roboto-mono/700.css";
+@import "~@fontsource/open-sans/index.css";
+$btn-color:rosybrown;
+:export{
+    primaryColor:$btn-color
+}
+.display{
+    
+    grid-area: display;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: end;
+    align-items: end;
+    color: whitesmoke;
+}
+.clear{
+    background-color: $btn-color;
+    grid-area: clear;
+    @extend %center-btn-txt;
+}
+.App{
+    padding: 7px;
+    width: 350px;
+    height: 500px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+                        "display display display display"
+                        "clear clear divide multiply"
+                        "seven eight nine subtract"
+                        "four five six add"
+                        "one two three equals"
+                        "zero zero decimal equals";
+    gap: 3px;
+    
+    
+}
+.one{
+    grid-area: one;
+    @extend %center-btn-txt;
+    background-color: $btn-color;
+}
+.two{
+    grid-area: two;
+    @extend %center-btn-txt;
+    background-color: $btn-color;
+}
+.three{
+    grid-area: three;
+    @extend %center-btn-txt;
+    background-color: $btn-color;
+}
+.four{
+    grid-area: four;
+    @extend %center-btn-txt;
+    background-color: $btn-color;
+}
+.five{
+    grid-area: five;
+    background-color: $btn-color;
+    @extend %center-btn-txt;
+}
+.six{
+    grid-area: six;
+    background-color: $btn-color;
+    @extend %center-btn-txt;
+}
+.seven{
+    grid-area: seven;
+    background-color: $btn-color;
+    @extend %center-btn-txt;
+}
+.eight{
+    grid-area: eight;
+    background-color:$btn-color;
+    @extend %center-btn-txt;
+}
+.nine{
+    grid-area: nine;
+    background-color: $btn-color;
+    @extend %center-btn-txt;
+}
+.equals{
+    grid-area: equals;
+    @extend %center-btn-txt;
+    background-color: $btn-color;
+    
+}
+.zero{
+    grid-area: zero;
+    background-color: $btn-color;
+    @extend %center-btn-txt;
+}
+.add{
+    grid-area: add;
+    @extend %center-btn-txt;
+    background-color: $btn-color;
+    
+}
+.subtract{
+    grid-area: subtract;
+    background-color: $btn-color;
+    @extend %center-btn-txt;
+}
+.multiply{
+    grid-area: multiply;
+    background-color: $btn-color;
+    @extend %center-btn-txt;
+}
+.divide{
+    @extend %center-btn-txt;
+    grid-area: divide;
+    background-color: $btn-color;
+}
+.decimal{
+    grid-area: decimal;
+    @extend %center-btn-txt;
+    background-color: $btn-color;
+}
+.formula{
+    font-family: "Open Sans";
+}
+.input{
+    font-family: "Roboto Mono"
+}
+%center-btn-txt{
+    @extend %btn-font;
+    @extend %center-btn;
+}
+%btn-font{
+    font-family: "Roboto Mono";
+}
+%center-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
